@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+.florence-section{
+    display: flex;
+    min-height: 100vh;
+    background-image: url(images/florence.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    isolation: isolate;
+}
+.image-overlay{
+    position: relative;
+    width: 40%;
+    padding: 8rem 4rem;
+    font-family: "Quicksand",sans-serif;
+}
+.image-overlay::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:#cf6a2b;
+    z-index: -1;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    opacity: 0.8;
+    mix-blend-mode: soft-light;
+}
+.image-overlay h1{
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(3.5rem,5vw,9rem);
+  line-height: 1.1;
+  color: #3e2f1c;
+  margin-bottom: 30px;
+}
+.image-overlay p{
+    font-family: inherit;
+    font-size: clamp(0.9rem,5vw,1.1rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3e2f1c;
+    margin-bottom: 20px;
+}
+.btn1{
+    width: max-content;
+    color: #3e2f1c;
+    background-color: #fff;
+    padding: 14px 24px;
+    font-family: inherit;
+    font-size: clamp(0.8rem,5vw,1rem);
+    font-weight: 700;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 16px;
+    cursor:pointer;
+    transition: all 0.5 ease-in-out;
+}
+.btn1:is(:hover,:focus-visible){
+    background-color: rgba(186,137,102,255);
+}
+@media(max-width:1200px){
+.image-overlay{
+    width: 48%;
+}
+}
+@media(max-width:900px){
+    .image-overlay{
+        padding: 6rem 3rem 0;
+    }
+}
+@media(max-width:750px){
+    .image-overlay{
+        width: 65%;
+    }
+}
+@media(max-width:480px){
+    .image-overlay{
+        width: 100%;
+    }
+}
